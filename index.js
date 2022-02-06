@@ -1,14 +1,19 @@
-import { getFileData, writeFileData, clearFileData, updateFileData } from "./lib/dataOperations.js";
+const {
+  getFileData,
+  writeFileData,
+  clearFileData,
+  updateFileData,
+} = require("./lib/dataOperations.js");
 
-import { createFile, deleteFile } from "./lib/fileOperations.js";
+const { createFile, deleteFile } = require("./lib/fileOperations.js");
 
+// export all functions
 
-// export data operations functions
-export getFileData
-export writeFileData
-export clearFileData
-export updateFileData
-
-// export file operations functions
-export createFile
-export deleteFile
+module.exports = {
+  getFileData,
+  writeFileData,
+  clearFileData,
+  updateFileData,
+  createFile,
+  deleteFile,
+};
