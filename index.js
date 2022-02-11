@@ -1,11 +1,11 @@
+const { createFile, deleteFile } = require('./lib/fileOperations.js');
+
 const {
   getFileData,
   writeFileData,
   clearFileData,
   updateFileData,
 } = require('./lib/dataOperations.js');
-
-const { createFile, deleteFile } = require('./lib/fileOperations.js');
 
 const {
   readWithStream,
@@ -25,3 +25,10 @@ module.exports = {
   writeWithStream,
   copyWithStreams,
 };
+
+// testing
+
+(async () => {
+  const [data, error] = await readWithStream('./test/file.js');
+  console.log(data);
+})();

@@ -6,7 +6,7 @@
 
 // dependencies
 const fs  = require("fs/promises");
-const { handleAsync, getPath } = require("./utils.js");
+const { handleAsync, getPath } = require("../lib/utils.js");
 
 /**
  * Return an array contain the result and the error if exists.
