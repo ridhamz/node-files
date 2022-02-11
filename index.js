@@ -3,12 +3,17 @@ const {
   writeFileData,
   clearFileData,
   updateFileData,
-} = require("./lib/dataOperations.js");
+} = require('./lib/dataOperations.js');
 
-const { createFile, deleteFile } = require("./lib/fileOperations.js");
+const { createFile, deleteFile } = require('./lib/fileOperations.js');
+
+const {
+  readWithStream,
+  writeWithStream,
+  copyWithStreams,
+} = require('./lib/streams.js');
 
 // export all functions
-
 module.exports = {
   getFileData,
   writeFileData,
@@ -16,4 +21,7 @@ module.exports = {
   updateFileData,
   createFile,
   deleteFile,
+  readWithStream,
+  writeWithStream,
+  copyWithStreams,
 };
