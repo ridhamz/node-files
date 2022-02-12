@@ -9,8 +9,9 @@ const {
 
 const {
   readWithStream,
-  writeWithStream,
   copyWithStreams,
+  writeWithStreams,
+  compressFile,
 } = require('./lib/streams.js');
 
 // export all functions
@@ -22,13 +23,6 @@ module.exports = {
   createFile,
   deleteFile,
   readWithStream,
-  writeWithStream,
   copyWithStreams,
+  writeWithStreams,
 };
-
-// testing
-
-(async () => {
-  const [data, error] = await readWithStream('./test/file.js');
-  console.log(data);
-})();
